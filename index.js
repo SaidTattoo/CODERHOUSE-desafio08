@@ -16,6 +16,12 @@ app.get("/api/productos/listar/:id",( req, res ) => {
     const result = prod.buscarPorId( parseInt(req.params.id))
     res.json(result ? {producto: result} : {error: 'producto no encontrado'})
 })
+// ejemplo de body de agregar producto
+// {
+//     "title": "(nombre del pgdsgdsroducto)",
+//     "price": 10000,
+//     "thumbnail": "url"
+// }
 
 app.post("/api/productos/guardar/",( req, res ) => {
     producto = req.body
