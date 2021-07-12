@@ -1,7 +1,6 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index"
@@ -13,5 +12,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaidTattoo/CODERHOUSE-desafio08.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SaidTattoo/CODERHOUSE-desafio08/issues"
+  },
+  "homepage": "https://github.com/SaidTattoo/CODERHOUSE-desafio08#readme",
+  "description": ""
 }

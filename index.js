@@ -9,17 +9,12 @@ app.use(express.urlencoded({extended: true}));
 const prod = new Producto()
 app.get("/api/productos/listar/",( req, res ) => {
     const data = prod.listar()
-    res.json(
-        {productos:data}
-    )
+        res.json( data.length !== 0 ? {productos:data} : {error: 'no hay productos cargados'})        
 })
 
 app.get("/api/productos/listar/:id",( req, res ) => {
     const result = prod.buscarPorId( parseInt(req.params.id))
-    res.json(
-        {productos:result}
-    )
-   
+    res.json(result ? {producto: result} : {error: 'producto no encontrado'})
 })
 
 app.post("/api/productos/guardar/",( req, res ) => {
